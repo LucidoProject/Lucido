@@ -1,82 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lucido</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-mvYjhBJXQ9VlNETV/xXShy849GsBHnKzVVudnMOcWUVM/6Nd2ksj8VNng5f8ylyX" crossorigin="anonymous">
-    <style type="text/css">
-        .table tbody>tr>td.vert-align {
-            vertical-align: middle;
-        }
-        .titlize {
-            font-size: 3em;
-            font-weight: inherit;
-        }
-        hr { border: 0;
-            height: 1px;
-            background: #333;
-            background-image: linear-gradient(to right, #ccc, #333, #ccc); 
-        }
-        .few-margin {
-            margin-top: -.3em;
-        }
-        .fewer-margin {
-            margin-top: -.9em;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <center>
-                    <hr />
-                    <strong>
-                        <h1 class="titlize">Marconi OpenData</h1>
-                    </strong>
-                    <h2 class="few-margin">
-                        <em>Lucido project</em>
-                    </h2>
-                </center>
-            </div><!-- /.col-md-12 -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-md-12">
-                <center>
-                    <div class="fewer-margin">
-                        <h3>
-                            <a class="btn btn-warning" href="/" role="button">Home</a>
-                            <a class="btn btn-primary" href="/infographics/" role="button">View data infographics</a>
-                            <a class="btn btn-default" href="http://infogr.am/marconivr/" role="button" target="_blank">Infogr.am profile</a>
-                        </h3>
-                    </div>
-                    <hr />
-                </center>
-            </div><!-- /.col-md-8 -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-md-12">
-                <center>
+{% extends "base.html" %}
 
-                <div class="infogram-embed" data-id="6582a75c-98a1-430c-8423-7cef524aa964" data-type="interactive" data-title="Iscrizioni prima"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a target="_blank" href="https://infogr.am/6582a75c-98a1-430c-8423-7cef524aa964" style="color:#989898!important;text-decoration:none!important;">Iscrizioni prima</a><br><a style="color:#989898!important;text-decoration:none!important;" href="http://charts.infogr.am/column-chart?utm_source=embed_bottom&utm_medium=seo&utm_campaign=column_chart" target="_blank">Create column charts</a></div>
+{% block page_title %} Lucido Infographics {% endblock %}
 
-                <div class="infogram-embed" data-id="408f284c-6aa9-48fa-a678-a58dffefbaa3" data-type="interactive" data-title="Assemblee"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a target="_blank" href="https://infogr.am/408f284c-6aa9-48fa-a678-a58dffefbaa3" style="color:#989898!important;text-decoration:none!important;">Assemblee</a><br><a style="color:#989898!important;text-decoration:none!important;" href="https://infogr.am" target="_blank">Create your own infographics</a></div>
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <center>
 
-                <div class="infogram-embed" data-id="674e87b3-6649-4dbf-8a8e-b0f6e9597a33" data-type="interactive" data-title="Situazione attuale studenti"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a target="_blank" href="https://infogr.am/674e87b3-6649-4dbf-8a8e-b0f6e9597a33" style="color:#989898!important;text-decoration:none!important;">Situazione attuale studenti</a><br><a style="color:#989898!important;text-decoration:none!important;" href="https://infogr.am" target="_blank">Create your own infographics</a></div>
+        <div class="infogram-embed" data-id="6582a75c-98a1-430c-8423-7cef524aa964" data-type="interactive" data-title="Iscrizioni prima"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
 
-                <div class="infogram-embed" data-id="17fdd227-3078-4060-af8a-c51923676dc9" data-type="interactive" data-title="Continuità"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a target="_blank" href="https://infogr.am/17fdd227-3078-4060-af8a-c51923676dc9" style="color:#989898!important;text-decoration:none!important;">Continuità</a><br><a style="color:#989898!important;text-decoration:none!important;" href="http://charts.infogr.am/bar-chart?utm_source=embed_bottom&utm_medium=seo&utm_campaign=bar_chart" target="_blank">Create bar charts</a></div>
+        <div class="infogram-embed" data-id="408f284c-6aa9-48fa-a678-a58dffefbaa3" data-type="interactive" data-title="Assemblee"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
 
-                <div class="infogram-embed" data-id="61508bdf-4ee8-47e6-a355-3f613c01894d" data-type="interactive" data-title="Scuola aperta e questionari"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a target="_blank" href="https://infogr.am/61508bdf-4ee8-47e6-a355-3f613c01894d" style="color:#989898!important;text-decoration:none!important;">Scuola aperta e questionari</a><br><a style="color:#989898!important;text-decoration:none!important;" href="http://charts.infogr.am/pie-chart?utm_source=embed_bottom&utm_medium=seo&utm_campaign=pie_chart" target="_blank">Create pie charts</a></div>
-                <hr />
-            </center>
-            </div><!-- /.col-md-8 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+        <div class="infogram-embed" data-id="674e87b3-6649-4dbf-8a8e-b0f6e9597a33" data-type="interactive" data-title="Situazione attuale studenti"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</body>
-</html>
+        <div class="infogram-embed" data-id="17fdd227-3078-4060-af8a-c51923676dc9" data-type="interactive" data-title="Continuità"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
+
+        <div class="infogram-embed" data-id="61508bdf-4ee8-47e6-a355-3f613c01894d" data-type="interactive" data-title="Scuola aperta e questionari"></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t),d=o[0],a=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=a+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var r=e.createElement(t);r.async=1,r.id=n,r.src=s,d.parentNode.insertBefore(r,d)}}(document,"script","infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
+
+        <hr />
+    </center>
+    </div><!-- /.col-md-8 -->
+</div><!-- /.row -->
+{% endblock %}
