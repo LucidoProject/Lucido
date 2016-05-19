@@ -4,29 +4,94 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lucido Project</title>
+    <title>Lucido</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-mvYjhBJXQ9VlNETV/xXShy849GsBHnKzVVudnMOcWUVM/6Nd2ksj8VNng5f8ylyX" crossorigin="anonymous">
+    <style type="text/css">
+        .table tbody>tr>td.vert-align {
+            vertical-align: middle;
+        }
+        .titlize {
+            font-size: 3em;
+            font-weight: inherit;
+        }
+        hr { border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc); 
+        }
+        .few-margin {
+            margin-top: -.3em;
+        }
+        .fewer-margin {
+            margin-top: -.9em;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <center>
-                    <h1>Lucido Project</h1>
+                    <hr />
+                    <strong>
+                        <h1 class="titlize">Marconi OpenData</h1>
+                    </strong>
+                    <h2 class="few-margin">
+                        <em>Lucido project</em>
+                    </h2>
                 </center>
             </div><!-- /.col-md-12 -->
         </div><!-- /.row -->
         <div class="row">
-            <div class="col-md-8">
-                <h3>
-                    <a class="btn btn-default" href="#" role="button">View data infographics</a>
-                </h3>
+            <div class="col-md-12">
+                <center>
+                    <div class="fewer-margin">
+                        <h3>
+                            <a class="btn btn-warning" href="/" role="button">Home</a>
+                            <a class="btn btn-primary" href="/infographics/" role="button">View data infographics</a>
+                            <a class="btn btn-default" href="http://infogr.am/marconivr/" role="button" target="_blank">Infogr.am profile</a>
+                        </h3>
+                    </div>
+                    <hr />
+                </center>
             </div><!-- /.col-md-8 -->
         </div><!-- /.row -->
-
-      {% for sheet in sheets %}
-  		<a href="/opendata/{{ sheet.sheet|cut:"./" }}" download="{{ sheet.sheet|cut:"./" }}">{{ sheet.title }}</a></p>
-      {% endfor %}
+        <div class="row">
+            <div class="col-md-12">
+                <center>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>File</th>
+                            <tr>
+                        </thead>
+                        <tbody>
+                        {% for sheet in sheets %}
+                            <tr>
+                                <td class="vert-align">
+                                    {{ sheet.title }}
+                                </td>
+                                <td class="vert-align">
+                                    {{ sheet.upload_date | date:"Y.m.j - G:i"}}
+                                </td>
+                                <td class="vert-align">
+                                    {{ sheet.description | urlize }}
+                                </td>
+                                <td class="vert-align">
+                                    <a class="btn btn-success" href="/opendata/{{ sheet.sheet|cut:"./" }}" download="{{ sheet.sheet|cut:"./" }}" role="button">Download</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                     <hr />
+            </center>
+            </div><!-- /.col-md-8 -->
+        </div><!-- /.row -->
     </div><!-- /.container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
